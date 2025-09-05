@@ -1,6 +1,6 @@
 # User Authentication & Management System with React,Node, and MySQL
 
-A full-stack MERN-like (MySQL instead of MongoDB) application featuring a React frontend, an Node.js backend, and a MySQL database. This project provides a complete system for user registration, login, and management of a separate user data list.
+A full-stack MERN-like (MySQL) application featuring a React frontend, an Node.js backend, and a MySQL database. This project provides a complete system for user registration, login, and management of a separate user data list.
 
 ## Features
 
