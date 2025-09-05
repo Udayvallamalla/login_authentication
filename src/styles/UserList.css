@@ -1,0 +1,282 @@
+/* UserList.css - User list component styles */
+
+.user-list-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Search Styles */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.clear-search-btn:hover {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.user-list-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.table-header {
+  background-color: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table-header th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.table-body tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+.table-body tr:hover {
+  background-color: #f8fafc;
+}
+
+.table-body tr:last-child {
+  border-bottom: none;
+}
+
+.table-body td {
+  padding: 12px 16px;
+  color: #4b5563;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.user-id {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #6b7280;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #374151;
+}
+
+.user-email {
+  color: #3b82f6;
+}
+
+.user-phone {
+  font-family: 'Courier New', monospace;
+}
+
+.user-gender {
+  text-transform: capitalize;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.gender-male {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.gender-female {
+  background-color: #fce7f3;
+  color: #be185d;
+}
+
+.gender-other {
+  background-color: #f3e8ff;
+  color: #7c3aed;
+}
+
+.no-users {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.error-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-list-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .search-input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .clear-search-btn {
+    margin-left: 0 !important;
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+  
+  .users-table {
+    font-size: 12px;
+  }
+  
+  .table-header th,
+  .table-body td {
+    padding: 8px 12px;
+  }
+  
+  .user-id {
+    max-width: 80px;
+    font-size: 10px;
+  }
+  
+  .table-header th {
+    font-size: 12px;
+  }
+  
+  .table-body td {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .user-list-container {
+    margin: 0 -10px;
+  }
+  
+  .users-table {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+  }
+  
+  .table-header th,
+  .table-body td {
+    padding: 6px 8px;
+  }
+  
+  .user-id {
+    display: none; /* Hide ID on very small screens */
+  }
+  
+  .table-header th:first-child,
+  .table-body td:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 14px;
+  }
+  
+  .clear-search-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .users-table {
+    font-size: 11px;
+  }
+  
+  .table-header th,
+  .table-body td {
+    padding: 4px 6px;
+  }
+  
+  .user-gender {
+    padding: 2px 6px;
+    font-size: 10px;
+  }
+  
+  .user-phone {
+    font-size: 10px;
+  }
+}
+
+/* Horizontal scroll for very small screens */
+@media (max-width: 400px) {
+  .user-list-container {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .users-table {
+    min-width: 500px;
+    margin: 0;
+    width: auto;
+  }
+  
+  .table-header th:first-child,
+  .table-body td:first-child {
+    display: table-cell; /* Show ID again for horizontal scroll */
+  }
+}

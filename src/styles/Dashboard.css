@@ -1,0 +1,363 @@
+/* Dashboard.css - Dashboard component styles */
+
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dashboard-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-title-section {
+  flex: 1;
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 4px 0;
+}
+
+.dashboard-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 400;
+}
+
+.dashboard-user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.dashboard-user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dashboard-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.dashboard-user-role {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.dashboard-logout-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ef4444;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-logout-btn:hover {
+  background-color: #ef4444;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.dashboard-nav {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-tabs {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dashboard-tab {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 140px;
+}
+
+.dashboard-tab.active {
+  background-color: #ffffff;
+  color: #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.dashboard-tab.inactive {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-tab.inactive:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 400px;
+}
+
+.dashboard-content-wrapper.form-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dashboard-content-wrapper.list-content {
+  width: 100%;
+}
+
+.dashboard-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.dashboard-welcome-banner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+  max-width: 350px;
+  z-index: 1000;
+  animation: slideInRight 0.5s ease-out;
+}
+
+.dashboard-welcome-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.dashboard-welcome-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 15px;
+  }
+  
+  .dashboard-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .dashboard-user-section {
+    align-self: flex-end;
+  }
+  
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .dashboard-nav {
+    padding: 12px 15px;
+  }
+  
+  .dashboard-tabs {
+    flex-direction: column;
+    max-width: 250px;
+    gap: 8px;
+  }
+  
+  .dashboard-tab {
+    width: 100%;
+    padding: 14px 20px;
+    min-width: auto;
+  }
+  
+  .dashboard-content {
+    padding: 20px 15px;
+  }
+  
+  .dashboard-content-wrapper {
+    padding: 20px;
+  }
+  
+  .dashboard-section-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-welcome-banner {
+    position: static;
+    margin: 15px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 12px;
+  }
+  
+  .dashboard-title {
+    font-size: 1.3rem;
+  }
+  
+  .dashboard-user-info {
+    gap: 8px;
+  }
+  
+  .dashboard-user-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .dashboard-user-name {
+    font-size: 13px;
+  }
+  
+  .dashboard-user-role {
+    font-size: 11px;
+  }
+  
+  .dashboard-logout-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .dashboard-content {
+    padding: 15px 10px;
+  }
+  
+  .dashboard-content-wrapper {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .dashboard-section-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .dashboard-header {
+    border-bottom: 2px solid #000000;
+  }
+  
+  .dashboard-tab.active {
+    border: 2px solid #000000;
+  }
+  
+  .dashboard-content-wrapper {
+    border: 2px solid #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-tab,
+  .dashboard-logout-btn,
+  .dashboard-welcome-banner {
+    transition: none;
+    animation: none;
+    transform: none;
+  }
+}

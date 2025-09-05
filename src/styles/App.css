@@ -1,0 +1,189 @@
+/* App.css - Main application styles */
+
+.app-container {
+  min-height: 100vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 400;
+  margin: 0;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-width: 120px;
+}
+
+.tab-button.active {
+  background-color: #ffffff;
+  color: #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.tab-button.inactive {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.content-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-content-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .app-title {
+    font-size: 1.6rem;
+  }
+  
+  .app-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .tab-container {
+    flex-direction: column;
+    max-width: 250px;
+    gap: 8px;
+  }
+  
+  .tab-button {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .content-container,
+  .form-content-container {
+    padding: 15px;
+    margin: 0 5px;
+    max-width: calc(100vw - 20px);
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 8px;
+  }
+  
+  .app-title {
+    font-size: 1.4rem;
+  }
+  
+  .content-container,
+  .form-content-container {
+    padding: 12px;
+    margin: 0 3px;
+    max-width: calc(100vw - 16px);
+  }
+}
+
+/* Ensure proper viewport handling */
+@media (max-height: 600px) {
+  .app-container {
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+  
+  .app-header {
+    margin-bottom: 15px;
+  }
+  
+  .tab-container {
+    margin-bottom: 15px;
+  }
+}
